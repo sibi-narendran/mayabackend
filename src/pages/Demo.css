@@ -1,0 +1,152 @@
+/* Full Code for AI Employee Form - CSS with Updated Styles */
+
+/* General Styles */
+.ai-employee-form-section {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: scale(0.9);
+    animation: fadeInScale 1.5s ease forwards;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.section-heading {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: slideInFromLeft 1.5s ease forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.form-group {
+    margin-bottom: 40px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeIn 1.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s;
+    background: #f9f9f9;
+    margin-top: 10px;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6200ea;
+    background: #fff;
+}
+
+/* Floating Label Styles */
+.input-label {
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background: #fff;
+    padding: 0 8px;
+    color: #6200ea;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+/* Text Input for Dynamic Fields */
+.dynamic-input-container {
+    margin-top: 20px;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Button Styles */
+.test-now-button {
+    display: inline-block;
+    width: auto;
+    padding: 20px 40px;
+    font-size: 24px;
+    color: #fff;
+    background: #6200ea;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    opacity: 1;
+    animation: bounceIn 2s ease forwards;
+    margin-top: 30px;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.test-now-button:hover {
+    background: #4b00b5;
+    transform: translateY(-5px);
+}
+
+.test-now-button:active {
+    background: #370091;
+    transform: translateY(2px);
+}
