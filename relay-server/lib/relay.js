@@ -7,6 +7,7 @@ export class RealtimeRelay {
     this.sockets = new WeakMap();
     this.wss = null;
   }
+  
 
   listen(port) {
     this.wss = new WebSocketServer({ port });
@@ -29,6 +30,8 @@ export class RealtimeRelay {
       ws.close();
       return;
     }
+
+    
 
     // Instantiate new client
     this.log(`Connecting with key "${this.apiKey.slice(0, 3)}..."`);
